@@ -1,0 +1,27 @@
+body {
+    margin:0;
+    background: #333;
+    text-align:center;
+    color:#ddd;
+    font-family: Signika Negative, Asap, sans-serif;
+    place-items: center;
+   }
+   
+   svg {
+    display:block;
+    position:relative;
+    border: 5px solid red;
+    background:#1d1d1d;
+    
+   }
+
+   .container {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    place-items: center;
+    border: 5px solid blue;
+    padding: auto;
+    margin: auto;
+   }
+

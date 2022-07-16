@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="./index.js" defer></script>
+    <script src="./zoomRobot.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Draggable.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <h2>Drag Icons into Bag</h2>
+
+
+<div class="container">
+
+<?xml version="1.0" encoding="utf-8"?>
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    viewBox="0 0 1400 1400" style="enable-background:new 0 0 800 430;" xml:space="preserve">
+        <g id="robot" class="icon">
+            <clipPath id="_clipPath_a2AwmlUlwTVW1MUyRsJN3lZSXwzC7dm3"><rect width="200" height="200"/></clipPath><g clip-path="url(#_clipPath_a2AwmlUlwTVW1MUyRsJN3lZSXwzC7dm3)"><g id="Group"><rect x="96.8" y="20" width="3.2" height="48" transform="matrix(1,0,0,1,0,0)" fill="rgb(6,162,229)"/><path d="M 98.4 64.8 L 98.4 64.8 C 122.243 64.8 141.6 84.157 141.6 108 L 141.6 120.8 C 141.6 144.643 122.243 164 98.4 164 L 98.4 164 C 74.557 164 55.2 144.643 55.2 120.8 L 55.2 108 C 55.2 84.157 74.557 64.8 98.4 64.8 Z" style="stroke:none;fill:#025E84;stroke-miterlimit:10;"/><rect x="20" y="119.2" width="160" height="57.6" transform="matrix(1,0,0,1,0,0)" fill="rgb(2,94,132)"/><rect x="36" y="100" width="128" height="96" transform="matrix(1,0,0,1,0,0)" fill="rgb(6,162,229)"/><rect x="48.8" y="116" width="99.2" height="28.8" transform="matrix(1,0,0,1,0,0)" fill="rgb(2,94,132)"/><rect x="42.4" y="151.2" width="112" height="35.2" transform="matrix(1,0,0,1,0,0)" fill="rgb(2,94,132)"/><path d=" M 42.4 183.2 L 61.6 154.4 L 93.6 183.2 L 116 154.4 L 144.8 183.2 L 154.4 162.255" fill="none" vector-effect="non-scaling-stroke" stroke-width="3.2" stroke="rgb(0,0,0)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><path d=" M 88.8 13.6 C 88.8 8.302 93.102 4 98.4 4 C 103.698 4 108 8.302 108 13.6 C 108 18.898 103.698 23.2 98.4 23.2 C 93.102 23.2 88.8 18.898 88.8 13.6 Z " fill="rgb(2,94,132)"/><path d=" M 58.4 130.4 C 58.4 125.985 61.985 122.4 66.4 122.4 C 70.815 122.4 74.4 125.985 74.4 130.4 C 74.4 134.815 70.815 138.4 66.4 138.4 C 61.985 138.4 58.4 134.815 58.4 130.4 Z " fill="rgb(235,235,235)"/><path d=" M 122.4 130.4 C 122.4 125.985 125.985 122.4 130.4 122.4 C 134.815 122.4 138.4 125.985 138.4 130.4 C 138.4 134.815 134.815 138.4 130.4 138.4 C 125.985 138.4 122.4 134.815 122.4 130.4 Z " fill="rgb(235,235,235)"/></g></g>
+        </g>
+        <g id="max" class="icon">
+            <rect x='100' y='50' width='500' height='500' fill='none' stroke="#00f" />            
+        </g>
+        <g class="icon" transform="translate(0.000000,720.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M900 3540 l0 -3250 2120 0 2120 0 0 3250 0 3250 -2120 0 -2120 0 0
+-3250z m4190 0 l0 -3200 -2070 0 -2070 0 0 3200 0 3200 2070 0 2070 0 0 -3200z"/>
+<path d="M1010 5375 l0 -1335 715 0 715 0 0 1335 0 1335 -715 0 -715 0 0
+-1335z m1380 0 l0 -1285 -665 0 -665 0 0 1285 0 1285 665 0 665 0 0 -1285z"/>
+<path d="M2670 5240 l0 -1280 1060 0 1060 0 0 1280 0 1280 -1060 0 -1060 0 0
+-1280z m2070 0 l0 -1230 -1010 0 -1010 0 0 1230 0 1230 1010 0 1010 0 0 -1230z"/>
+<path d="M1000 2740 l0 -1050 1605 0 1605 0 0 1050 0 1050 -1605 0 -1605 0 0
+-1050z m3160 0 l0 -1000 -1555 0 -1555 0 0 1000 0 1000 1555 0 1555 0 0 -1000z"/>
+</g>
+    </svg>
+</div>
+
+<button id="boton">90</button>
+<button id="boton2">180</button> 
+<button id="boton3">270</button> 
+<button id="boton4">360</button> 
+</body>
+</html>
