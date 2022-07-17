@@ -5,34 +5,38 @@ Draggable.create(".icon", {
   }
 );
 
-function myfun() {
-    gsap.to(".icon", {rotation: 90, duration: 1, transformOrigin:"center center"});
-}
 
-document.getElementById("boton").onclick = function(){
-    myfun();
-}
 
-function myfun2() {
-    gsap.to(".icon", {rotation: 180,  duration: 1, transformOrigin:"center center"});
-}
+//------------------------------- Zoom -------------------------------------
 
-document.getElementById("boton2").onclick = function(){
-    myfun2();
-}
+const container = document.querySelector('.container')
+const img = document.querySelector(".zoom")
 
-function myfun3() {
-    gsap.to(".icon", {rotation: 270, duration: 1, transformOrigin:"center center"});
-}
+let zoom = 1
+container.addEventListener('wheel', e => {
+    img.style.transformOrigin = `${e.offsetX}px ${e.offsetY}px`
 
-document.getElementById("boton3").onclick = function(){
-    myfun3();
-}
+    zoom += e.deltaY * -0.01
+    zoom = Math.min(Math.max(1, zoom), 3)
 
-function myfun4() {
-    gsap.to(".icon", {rotation: 360, duration: 1, transformOrigin:"center center"});
-}
+    if (zoom == 1) {
+        img.style.left = '0px'
+        img.style.top = '0px'
+    }
 
-document.getElementById("boton4").onclick = function(){
-    myfun4();
-}
+    img.style.transform = `scale(${zoom})`
+});
+
+//------------------------- Rotate---------------------------------------------
+
+let moveDown = document.addEventListener('keydown', (event) =>{
+    
+    switch (event.key) {
+        case 'ArrowUp': gsap.to("#Layer_1", {rotation: 360, duration: 1, transformOrigin:"center center"}); break;
+        case 'ArrowDown':  gsap.to("#Layer_1", {rotation: 180,  duration: 1, transformOrigin:"center center"}); break;
+        case 'ArrowLeft': gsap.to("#Layer_1", {rotation: 270, duration: 1, transformOrigin:"center center"}); break;
+        case 'ArrowRight': 
+            gsap.to("#Layer_1", {rotation: 90, duration: 1, transformOrigin:"center center"});
+        ; break;
+    }
+});
